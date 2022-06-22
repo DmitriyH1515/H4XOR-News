@@ -11,6 +11,10 @@
 		2CF5F46B280C13AC00579928 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF5F46A280C13AC00579928 /* ContentView.swift */; };
 		2CF5F46D280C13AE00579928 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CF5F46C280C13AE00579928 /* Assets.xcassets */; };
 		2CF5F470280C13AE00579928 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CF5F46F280C13AE00579928 /* Preview Assets.xcassets */; };
+		2CF5F478280C168700579928 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF5F477280C168700579928 /* NetworkManager.swift */; };
+		2CF5F47A280C17F400579928 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF5F479280C17F400579928 /* PostData.swift */; };
+		2CF5F47D280C1E3100579928 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF5F47C280C1E3100579928 /* DetailView.swift */; };
+		2CF5F47F280C216200579928 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF5F47E280C216200579928 /* WebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,11 @@
 		2CF5F46A280C13AC00579928 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2CF5F46C280C13AE00579928 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2CF5F46F280C13AE00579928 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2CF5F477280C168700579928 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		2CF5F479280C17F400579928 /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
+		2CF5F47C280C1E3100579928 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		2CF5F47E280C216200579928 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		2CF5F480280C22F700579928 /* H4XOR News.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "H4XOR News.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +60,10 @@
 		2CF5F467280C13AC00579928 /* H4XOR News */ = {
 			isa = PBXGroup;
 			children = (
+				2CF5F480280C22F700579928 /* H4XOR News.entitlements */,
+				2CF5F476280C166600579928 /* Models */,
 				2CF5F468280C13AC00579928 /* H4XOR_NewsApp.swift */,
-				2CF5F46A280C13AC00579928 /* ContentView.swift */,
+				2CF5F47B280C1E0700579928 /* Views */,
 				2CF5F46C280C13AE00579928 /* Assets.xcassets */,
 				2CF5F46E280C13AE00579928 /* Preview Content */,
 			);
@@ -65,6 +76,25 @@
 				2CF5F46F280C13AE00579928 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2CF5F476280C166600579928 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2CF5F477280C168700579928 /* NetworkManager.swift */,
+				2CF5F479280C17F400579928 /* PostData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2CF5F47B280C1E0700579928 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2CF5F46A280C13AC00579928 /* ContentView.swift */,
+				2CF5F47C280C1E3100579928 /* DetailView.swift */,
+				2CF5F47E280C216200579928 /* WebView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +167,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CF5F478280C168700579928 /* NetworkManager.swift in Sources */,
+				2CF5F47A280C17F400579928 /* PostData.swift in Sources */,
 				2CF5F46B280C13AC00579928 /* ContentView.swift in Sources */,
+				2CF5F47F280C216200579928 /* WebView.swift in Sources */,
+				2CF5F47D280C1E3100579928 /* DetailView.swift in Sources */,
 				2CF5F469280C13AC00579928 /* H4XOR_NewsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,6 +298,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "H4XOR News/H4XOR News.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"H4XOR News/Preview Content\"";
@@ -282,6 +317,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Dima-Havrylenko.H4XOR-News";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -293,6 +329,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "H4XOR News/H4XOR News.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"H4XOR News/Preview Content\"";
@@ -311,6 +348,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Dima-Havrylenko.H4XOR-News";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
